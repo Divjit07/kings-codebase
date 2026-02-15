@@ -14,7 +14,7 @@ const AddProject = () => {
 
     // For now, we'll just use a gradient placeholder since we can't upload real files to a server
     // In a real app, this would handle file upload to S3/Cloudinary
-    const [imageStyle, setImageStyle] = useState('bg-gradient-to-br from-gold/20 to-black');
+    const [imageStyle] = useState('bg-gradient-to-br from-gold/20 to-black');
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
