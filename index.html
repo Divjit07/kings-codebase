@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kings-installation</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    window.onerror = function (message, source, lineno, colno, error) {
+      document.body.innerHTML = '<div style="color:red; padding:20px; font-family:monospace; background:black; height:100vh;"><h1>Global Error</h1><p>' + message + '</p><pre>' + (error ? error.stack : '') + '</pre></div>';
+    };
+    window.onunhandledrejection = function (event) {
+      document.body.innerHTML = '<div style="color:red; padding:20px; font-family:monospace; background:black; height:100vh;"><h1>Unhandled Rejection</h1><p>' + event.reason + '</p></div>';
+    };
+  </script>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
